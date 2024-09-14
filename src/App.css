@@ -1,0 +1,84 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("components/images/backgroundImg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: aliceblue;
+}
+
+.App {
+  text-align: center;
+}
+
+.title {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.titleText {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  letter-spacing: 0.2em;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0),
+    rgb(125, 125, 125),
+    rgb(255, 255, 255),
+    rgb(135, 135, 135),
+    rgb(0, 0, 0)
+  );
+  background-size: 500%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Make the text itself transparent to reveal gradient */
+  animation: rotateColors 3.5s infinite linear; /* Rotating color effect */
+}
+@keyframes rotateColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.startButton {
+  background-color: rgb(129, 62, 135);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: rgb(68, 47, 88);
+}
+
+.startButton:focus {
+  outline: none;
+}
