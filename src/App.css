@@ -1,84 +1,120 @@
-/* Global Styles */
-* {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap");
+
+body,
+html {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-image: url("components/images/backgroundImg.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: aliceblue;
+  height: 100%;
+  font-family: "Cinzel", serif;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
 }
 
 .App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, #000 70%),
+    url("components/images/backgroundImg.gif");
+  background-size: cover;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.content {
+  z-index: 1;
   text-align: center;
 }
 
-.title {
-  display: inline-block;
-  padding: 20px;
-  border: 2px solid #ffffff;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  position: relative;
+.logo-container {
+  margin-bottom: 20px;
 }
 
-.titleText {
-  font-size: 4rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 1.2;
-  margin-bottom: 30px;
-  letter-spacing: 0.2em;
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    90deg,
-    rgb(0, 0, 0),
-    rgb(125, 125, 125),
-    rgb(255, 255, 255),
-    rgb(135, 135, 135),
-    rgb(0, 0, 0)
-  );
-  background-size: 500%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; /* Make the text itself transparent to reveal gradient */
-  animation: rotateColors 3.5s infinite linear; /* Rotating color effect */
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: glow 2s infinite alternate;
 }
-@keyframes rotateColors {
+
+@keyframes glow {
   0% {
-    background-position: 0% 50%;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de;
   }
   100% {
-    background-position: 100% 50%;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de;
   }
 }
 
-.startButton {
-  background-color: rgb(129, 62, 135);
-  color: black;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
+.title {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.title.show {
+  opacity: 1;
+}
+
+.title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealText 0.5s forwards;
+}
+
+@keyframes revealText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Start Button Styling */
+.start-button {
+  background: transparent;
+  color: #fff;
+  border: 3px solid #ff00de;
+  padding: 15px 30px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  font-family: "Cinzel", serif;
 }
 
-.startButton:hover {
-  background-color: rgb(68, 47, 88);
+.start-button::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid #ff00de;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
 }
 
-.startButton:focus {
-  outline: none;
+.start-button:hover::before {
+  transform: rotate(45deg);
+}
+
+.start-button:hover {
+  color: #ffffff;
+  box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 40px #ff00de;
 }
