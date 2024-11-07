@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import logo from "./components/images/1.png"; // Corrected import path
+import logo from "./components/images/1.png";
 
 function App() {
   const [opacity, setOpacity] = useState(0.3);

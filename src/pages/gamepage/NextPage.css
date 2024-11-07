@@ -1,0 +1,49 @@
+/* Full-page layout styling */
+.next-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left .website-name {
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+  color: #ff007f;
+}
+
+/* Profile section styling */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ff007f;
+}
+
+.profile-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}

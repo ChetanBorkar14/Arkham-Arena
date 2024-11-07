@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import NextPage from "./pages/nextPage";
+import NextPage from "./pages/gamepage/nextPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/NextPage",
+    path: "/nextPage", // Changed to lowercase "n"
     element: <NextPage />,
   },
 ]);
