@@ -32,7 +32,7 @@
 /* Hover effects for each box */
 .game-option:hover {
   transform: translateY(-10px);
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7), 0 0 15px #ff007f;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7), 0 0 15px #00aaff;
   background: linear-gradient(145deg, #3a3a3a, #282828);
 }
 

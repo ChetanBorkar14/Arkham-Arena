@@ -51,10 +51,10 @@ html {
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00aaff; /* Changed here */
   }
   100% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de;
+    box-shadow: 0 0 10px #fff, 0 0 20px #00aaff, 0 0 30px #00aaff; /* Changed here */
   }
 }
 
@@ -87,7 +87,7 @@ html {
 .start-button {
   background: transparent;
   color: #fff;
-  border: 3px solid #ff00de;
+  border: 3px solid #00aaff; /* Changed here */
   padding: 15px 30px;
   font-size: 1.2rem;
   cursor: pointer;
@@ -106,7 +106,7 @@ html {
   left: -3px;
   right: -3px;
   bottom: -3px;
-  border: 2px solid #ff00de;
+  border: 2px solid #00aaff; /* Changed here */
   transform: rotate(0deg);
   transition: transform 0.5s;
 }
@@ -117,5 +117,5 @@ html {
 
 .start-button:hover {
   color: #ffffff;
-  box-shadow: 0 0 10px #ff00de, 0 0 20px #ff00de, 0 0 40px #ff00de;
+  box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 40px #00aaff; /* Changed here */
 }

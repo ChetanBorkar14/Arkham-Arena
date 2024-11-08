@@ -21,7 +21,7 @@
 .navbar-left .website-name {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
-  color: #ff007f;
+  color: #00aaff; /* Changed from #ff007f (pink) to #00aaff (blue) */
 }
 
 /* Profile section styling */
@@ -40,7 +40,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #ff007f;
+  border: 2px solid #00aaff; /* Changed from #ff007f (pink) to #00aaff (blue) */
 }
 
 .profile-name {
