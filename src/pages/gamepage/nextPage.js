@@ -1,13 +1,16 @@
 import React from "react";
 import Games from "./games";
 import "./NextPage.css";
+import { Link } from "react-router-dom";
 
 function NextPage() {
   return (
     <div className="next-page">
       <nav className="navbar">
         <div className="navbar-left">
-          <h1 className="website-name">Arkham Arena</h1>
+          <h1 className="website-name">
+            <Link to="/">Arkham Arena</Link>
+          </h1>
         </div>
         <div className="navbar-right">
           <div className="profile-section">

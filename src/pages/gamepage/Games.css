@@ -1,30 +1,32 @@
-/* Center the grid and provide spacing */
+/* Center the grid and provide equal spacing on all sides */
+.games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
   gap: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
-  justify-items: center;
+  width: 100%;
 }
 
 /* Style for each game option box */
 .game-option {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
   color: #fff;
-  font-size: 1.2rem;
-  width: 100%;
-  height: 150px; /* Adjust the height for a rectangular shape */
+  height: 120px; /* Consistent height */
   border-radius: 12px;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 0 30px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden; /* Ensure content stays within rounded corners */
 }
 
 /* Hover effects for each box */
@@ -34,10 +36,56 @@
   background: linear-gradient(145deg, #3a3a3a, #282828);
 }
 
-.game-option span {
-  transition: color 0.3s ease;
+.game-name {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: left;
+  z-index: 1;
 }
 
-.game-option:hover span {
-  color: #ff007f;
+.game-icon {
+  font-size: 3rem;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .game-option {
+    height: 100px; /* Slightly smaller on mobile */
+  }
+
+  .game-name {
+    font-size: 1rem;
+  }
+
+  .game-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* Optional: Add a subtle background effect */
+.game-option::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(-45deg);
+  z-index: 0;
+}
+
+/* Optional: Container styling */
+.games-container h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
 }

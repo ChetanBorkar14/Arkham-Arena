@@ -1,14 +1,67 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Games.css";
 
 function Games() {
+  const gamesList = [
+    {
+      name: "Tic Tac Toe",
+      path: "/games/tic-tac-toe",
+      icon: "🎲",
+    },
+    {
+      name: "Rock Paper Scissors",
+      path: "/games/rock-paper-scissors",
+      icon: "✋",
+    },
+    {
+      name: "2048",
+      path: "/games/2048",
+      icon: "🔢",
+    },
+    {
+      name: "Sudoku",
+      path: "/games/sudoku",
+      icon: "🧩",
+    },
+    {
+      name: "Chess",
+      path: "/games/chess",
+      icon: "♟️",
+    },
+    {
+      name: "Snake and Ladder",
+      path: "/games/snake-ladder",
+      icon: "🐍",
+    },
+    {
+      name: "Ludo",
+      path: "/games/ludo",
+      icon: "🎲",
+    },
+    {
+      name: "Bubble Shooter",
+      path: "/games/bubble-shooter",
+      icon: "🫧",
+    },
+    {
+      name: "Memory Game",
+      path: "/games/memory",
+      icon: "🃏",
+    },
+  ];
+
   return (
-    <div className="games-grid">
-      {[...Array(9)].map((_, index) => (
-        <div key={index} className="game-option">
-          <span>Option {index + 1}</span>
-        </div>
-      ))}
+    <div className="games-container">
+      <h1>Game Hub</h1>
+      <div className="games-grid">
+        {gamesList.map((game, index) => (
+          <Link to={game.path} key={index} className="game-option">
+            <span className="game-name">{game.name}</span>
+            <div className="game-icon">{game.icon}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

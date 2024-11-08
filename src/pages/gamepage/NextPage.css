@@ -2,9 +2,10 @@
 .next-page {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
   background-color: #121212;
   color: #fff;
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 /* Navbar styling */
@@ -46,4 +47,10 @@
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
+}
+
+/* Links style */
+.website-name a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -8,7 +8,8 @@ html {
   font-family: "Cinzel", serif;
   background-color: #000;
   color: #fff;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .App {
