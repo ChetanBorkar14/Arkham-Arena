@@ -58,13 +58,13 @@ function Rps() {
 
       <div className="buttons">
         <button className="button" onClick={() => playGame("rock")}>
-          <img src="images/rock.png" className="move-icon" alt="Rock" />
+          <img src="" className="move-icon" alt="Rock" />
         </button>
         <button className="button" onClick={() => playGame("paper")}>
           <img src="images/paper.png" className="move-icon" alt="Paper" />
         </button>
         <button className="button" onClick={() => playGame("scissors")}>
-          <img src="images/scissors.png" className="move-icon" alt="Scissors" />
+          <img src="" className="move-icon" alt="Scissors" />
         </button>
       </div>
 

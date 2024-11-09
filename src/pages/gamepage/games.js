@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Games.css";
-import Rps from "../game/rps";
 
 function Games() {
   const gamesList = [
     {
       name: "Tic Tac Toe",
-      path: "/games/tic-tac-toe",
+      path: "/ttt",
       icon: "🎲",
     },
     {
@@ -17,37 +16,37 @@ function Games() {
     },
     {
       name: "2048",
-      path: "/games/2048",
+      path: "/a",
       icon: "🔢",
     },
     {
       name: "Sudoku",
-      path: "/games/sudoku",
+      path: "/sudoko",
       icon: "🧩",
     },
     {
       name: "Chess",
-      path: "/games/chess",
+      path: "/chess",
       icon: "♟️",
     },
     {
       name: "Snake and Ladder",
-      path: "/games/snake-ladder",
+      path: "/snl",
       icon: "🐍",
     },
     {
       name: "Ludo",
-      path: "/games/ludo",
+      path: "/ludo",
       icon: "🎲",
     },
     {
       name: "Bubble Shooter",
-      path: "/games/bubble-shooter",
+      path: "/bs",
       icon: "🫧",
     },
     {
       name: "Memory Game",
-      path: "/games/memory",
+      path: "/mg",
       icon: "🃏",
     },
   ];
