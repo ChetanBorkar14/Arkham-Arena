@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Games.css";
+import Rps from "../game/rps";
 
 function Games() {
   const gamesList = [
@@ -11,7 +12,7 @@ function Games() {
     },
     {
       name: "Rock Paper Scissors",
-      path: "/games/rock-paper-scissors",
+      path: "/rps",
       icon: "✋",
     },
     {
