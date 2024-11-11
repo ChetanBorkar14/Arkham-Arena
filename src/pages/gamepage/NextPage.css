@@ -1,14 +1,12 @@
-/* Full-page layout styling */
 .next-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  min-height: 100vh;
   background-color: #121212;
   color: #fff;
-  overflow-y: auto; /* Allow scrolling if content overflows */
+  overflow-y: auto;
 }
 
-/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,10 +19,9 @@
 .navbar-left .website-name {
   font-family: "Cinzel", serif;
   font-size: 1.5rem;
-  color: #00aaff; /* Changed from #ff007f (pink) to #00aaff (blue) */
+  color: #00aaff;
 }
 
-/* Profile section styling */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -40,7 +37,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #00aaff; /* Changed from #ff007f (pink) to #00aaff (blue) */
+  border: 2px solid #00aaff;
 }
 
 .profile-name {
@@ -49,7 +46,6 @@
   color: #fff;
 }
 
-/* Links style */
 .website-name a {
   text-decoration: none;
   color: inherit;

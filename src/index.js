@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/nextPage", // Changed to lowercase "n"
+    path: "/nextPage",
     element: <NextPage />,
   },
   {

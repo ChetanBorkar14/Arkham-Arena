@@ -27,7 +27,6 @@ function App() {
       <div className="content">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />{" "}
-          {/* Use the imported logo */}
         </div>
         <h1 className="title show">
           <span>A</span>

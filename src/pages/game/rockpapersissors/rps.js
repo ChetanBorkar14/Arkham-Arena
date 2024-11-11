@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./rps.css";
+import styles from "./rps.module.css";
+import rock from "../../../components/images/rock.png";
+import paper from "../../../components/images/paper.png";
+import scissors from "../../../components/images/scissors.png";
 
 function Rps() {
   const [score, setScore] = useState(
@@ -7,6 +10,26 @@ function Rps() {
   );
   const [result, setResult] = useState("");
   const [moves, setMoves] = useState({ playerMove: "", computerMove: "" });
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "rgb(43, 43, 43)";
+    document.body.style.color = "white";
+    document.body.style.display = "flex";
+    document.body.style.justifyContent = "center";
+    document.body.style.alignItems = "center";
+    document.body.style.height = "100vh";
+    document.body.style.margin = "0";
+
+    return () => {
+      document.body.style.backgroundColor = "";
+      document.body.style.color = "";
+      document.body.style.display = "";
+      document.body.style.justifyContent = "";
+      document.body.style.alignItems = "";
+      document.body.style.height = "";
+      document.body.style.margin = "";
+    };
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("score", JSON.stringify(score));
@@ -53,23 +76,23 @@ function Rps() {
   }
 
   return (
-    <div className="container dark">
-      <p className="title">Rock Paper Scissors</p>
+    <div className={styles.rpsContainer}>
+      <p className={styles.title}>Rock Paper Scissors</p>
 
-      <div className="buttons">
-        <button className="button" onClick={() => playGame("rock")}>
-          <img src="" className="move-icon" alt="Rock" />
+      <div className={styles.buttons}>
+        <button className={styles.button} onClick={() => playGame("rock")}>
+          <img src={rock} className={styles.moveIcon} alt="Rock" />
         </button>
-        <button className="button" onClick={() => playGame("paper")}>
-          <img src="images/paper.png" className="move-icon" alt="Paper" />
+        <button className={styles.button} onClick={() => playGame("paper")}>
+          <img src={paper} className={styles.moveIcon} alt="Paper" />
         </button>
-        <button className="button" onClick={() => playGame("scissors")}>
-          <img src="" className="move-icon" alt="Scissors" />
+        <button className={styles.button} onClick={() => playGame("scissors")}>
+          <img src={scissors} className={styles.moveIcon} alt="Scissors" />
         </button>
       </div>
 
       <p
-        className="js-result"
+        className={styles.jsResult}
         style={{
           color:
             result === "You Win"
@@ -81,16 +104,16 @@ function Rps() {
       >
         {result}
       </p>
-      <p className="js-moves">
+      <p className={styles.jsMoves}>
         You picked {moves.playerMove}. Computer picked {moves.computerMove}.
       </p>
-      <p className="js-score">
+      <p className={styles.jsScore}>
         <span style={{ color: "green" }}>Wins: {score.wins}</span> ,{" "}
         <span style={{ color: "red" }}>Losses: {score.losses}</span> ,{" "}
         <span style={{ color: "white" }}>Ties: {score.ties}</span>
       </p>
 
-      <button className="reset" onClick={resetScore}>
+      <button className={styles.reset} onClick={resetScore}>
         Reset Score
       </button>
     </div>
